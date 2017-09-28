@@ -6,17 +6,17 @@
 /*   By: nwang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/20 14:24:11 by nwang             #+#    #+#             */
-/*   Updated: 2017/09/27 20:14:33 by nwang            ###   ########.fr       */
+/*   Updated: 2017/09/27 21:49:46 by nwang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncat(char *dst, const char *src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	int i;
-	int j;
-	int res;
+	size_t i;
+	size_t j;
+	size_t res;
 
 	i = 0;
 	j = 0;
