@@ -6,7 +6,7 @@
 #    By: nwang <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/17 09:42:04 by nwang             #+#    #+#              #
-#    Updated: 2017/09/29 23:53:13 by nwang            ###   ########.fr        #
+#    Updated: 2017/09/30 14:24:01 by nwang            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,10 +57,10 @@ SRC = 	$(PATH_SRC)ft_strlen.c \
 		$(PATH_SRC)ft_strequ.c \
 		$(PATH_SRC)ft_strnequ.c \
 		$(PATH_SRC)ft_strsub.c \
-		$(PATH_SRC)ft_strjoin.c
-		#$(PATH_SRC)ft_strtrim.c \
-		#$(PATH_SRC)ft_strsplit.c \
-		#$(PATH_SRC)ft_itoa.c \
+		$(PATH_SRC)ft_strjoin.c \
+		$(PATH_SRC)ft_strtrim.c \
+		$(PATH_SRC)ft_strsplit.c \
+		$(PATH_SRC)ft_itoa.c \
 		$(PATH_SRC)ft_putchar.c \
 		$(PATH_SRC)ft_putstr.c \
 		$(PATH_SRC)ft_putendl.c \
@@ -68,13 +68,13 @@ SRC = 	$(PATH_SRC)ft_strlen.c \
 		$(PATH_SRC)ft_putchar_fd.c \
 		$(PATH_SRC)ft_putstr_fd.c \
 		$(PATH_SRC)ft_putendl_fd.c \
-		$(PATH_SRC)ft_putnbr_fd.c 
-		#$(PATH_SRC)ft_lstnew.c \
-		#$(PATH_SRC)ft_lstdelone.c \
-		#$(PATH_SRC)ft_lstdel.c \
-		#$(PATH_SRC)ft_lstadd.c \
-		#$(PATH_SRC)ft_lstiter.c \
-		#$(PATH_SRC)ft_lstmap.c
+		$(PATH_SRC)ft_putnbr_fd.c \
+	#	$(PATH_SRC)ft_lstnew.c \
+		$(PATH_SRC)ft_lstdelone.c \
+		$(PATH_SRC)ft_lstdel.c \
+		$(PATH_SRC)ft_lstadd.c \
+		$(PATH_SRC)ft_lstiter.c \
+	#	$(PATH_SRC)ft_lstmap.c
 
 OBJ = $(patsubst %.c,%.o,$(SRC))
 

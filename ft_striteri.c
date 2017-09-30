@@ -6,7 +6,7 @@
 /*   By: nwang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/29 18:57:13 by nwang             #+#    #+#             */
-/*   Updated: 2017/09/29 23:43:26 by nwang            ###   ########.fr       */
+/*   Updated: 2017/09/30 15:36:15 by nwang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	unsigned int i;
-	i = 0;
 
+	i = 0;
 	if (s == NULL || f == NULL)
 		return ;
 	while (s[i] != '\0')
