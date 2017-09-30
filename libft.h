@@ -6,7 +6,7 @@
 /*   By: nwang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/23 20:49:08 by nwang             #+#    #+#             */
-/*   Updated: 2017/09/27 20:55:05 by nwang            ###   ########.fr       */
+/*   Updated: 2017/09/29 23:51:40 by nwang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,18 +71,9 @@ char				*ft_strmapi(char const *s, char(*f)(unsigned int, char));
 int					ft_strequ(char const *s1, char const *s2);
 int					ft_strnequ(char const *s1, char const *s2, size_t n);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
-char				*ft_str_arrjoin(char **arr_str);
-void				ft_str_arrfree(char **arr_str);
-char				*ft_str_multjoin(char *str, ...);
-void				ft_str_multfree(char *str, ...);
-char				*ft_str_toupper(char *str);
 char				*ft_strjoin(char const *s1, char const *s2);
-char				*ft_strjoin_free_l(char *s1, char const *s2);
-char				*ft_strjoin_free_r(char const *s1, char *s2);
-char				*ft_strjoin_free_lr(char *s1, char *s2);
 char				*ft_strtrim(char const *s);
 char				**ft_strsplit(char const *s, char c);
-size_t				ft_str_count_char(char *str, char c);
 
 char				*ft_itoa(int n);
 void				ft_putchar(char c);
@@ -94,22 +85,12 @@ void				ft_putstr_fd(char const *s, int fd);
 void				ft_putstr_fd(char const *s, int fd);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
-void				ft_puthexa(uint64_t nb);
-
+/*
 t_list				*ft_lstnew(void const *content, size_t content_size);
 void				ft_lstdelone(t_list **alst, void (*del)(void*, size_t));
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
-
-t_uint				ft_arrlen(char **arr);
-char				**ft_arrcpy(char **arr);
-void				ft_arrfree(char ***arr);
-
-void				ft_exit(void);
-void				ft_malloc_error(void);
-void				ft_error_str(char *str);
-void				ft_error_str_exit(char *str);
-
+*/
 #endif
