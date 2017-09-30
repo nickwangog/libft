@@ -6,11 +6,11 @@
 /*   By: nwang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/09 22:12:48 by nwang             #+#    #+#             */
-/*   Updated: 2017/09/19 12:44:23 by nwang            ###   ########.fr       */
+/*   Updated: 2017/09/29 22:34:46 by nwang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
+#include "libft.h"
 
 void	ft_putstr(char const *s)
 {

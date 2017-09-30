@@ -6,7 +6,7 @@
 #    By: nwang <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/17 09:42:04 by nwang             #+#    #+#              #
-#    Updated: 2017/09/26 19:45:42 by nwang            ###   ########.fr        #
+#    Updated: 2017/09/29 23:36:54 by nwang            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ PATH_SRC = ./
 PATH_OBJ = ./
 
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -Ofast -I ./includes/
+CFLAGS = -Wall -Wextra -Werror -I ./includes/
 
 SRC = 	$(PATH_SRC)ft_strlen.c \
 		$(PATH_SRC)ft_strdup.c \
@@ -74,13 +74,13 @@ SRC = 	$(PATH_SRC)ft_strlen.c \
 		$(PATH_SRC)ft_lstdel.c \
 		$(PATH_SRC)ft_lstadd.c \
 		$(PATH_SRC)ft_lstiter.c \
-		$(PATH_SRC)ft_lstmap.c \
+		$(PATH_SRC)ft_lstmap.c
 
 OBJ = $(patsubst %.c,%.o,$(SRC))
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
+$(NAME):
 	$(CC) -Wall -Wextra -Werror -c $(SRC)
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
