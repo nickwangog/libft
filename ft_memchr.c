@@ -6,14 +6,14 @@
 /*   By: nwang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/28 17:37:06 by nwang             #+#    #+#             */
-/*   Updated: 2017/09/28 21:30:17 by nwang            ###   ########.fr       */
+/*   Updated: 2017/09/28 22:01:51 by nwang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
-{	
+{
 	char	*str;
 	size_t	counter;
 

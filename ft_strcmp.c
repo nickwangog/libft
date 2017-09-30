@@ -6,11 +6,13 @@
 /*   By: nwang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/09 22:12:48 by nwang             #+#    #+#             */
-/*   Updated: 2017/04/12 11:38:33 by nwang            ###   ########.fr       */
+/*   Updated: 2017/09/28 22:41:17 by nwang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strcmp(char *s1, char *s2)
+#include "libft.h"
+
+int		ft_strcmp(const char *s1, const char *s2)
 {
 	while (*s1++ == *s2++)
 		if (*s1 == '\0' && *s2 == '\0')
