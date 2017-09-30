@@ -6,7 +6,7 @@
 #    By: nwang <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/17 09:42:04 by nwang             #+#    #+#              #
-#    Updated: 2017/09/29 23:49:06 by nwang            ###   ########.fr        #
+#    Updated: 2017/09/29 23:53:13 by nwang            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,10 +57,10 @@ SRC = 	$(PATH_SRC)ft_strlen.c \
 		$(PATH_SRC)ft_strequ.c \
 		$(PATH_SRC)ft_strnequ.c \
 		$(PATH_SRC)ft_strsub.c \
-		$(PATH_SRC)ft_strjoin.c \
-		$(PATH_SRC)ft_strtrim.c \
-		$(PATH_SRC)ft_strsplit.c \
-		$(PATH_SRC)ft_itoa.c \
+		$(PATH_SRC)ft_strjoin.c
+		#$(PATH_SRC)ft_strtrim.c \
+		#$(PATH_SRC)ft_strsplit.c \
+		#$(PATH_SRC)ft_itoa.c \
 		$(PATH_SRC)ft_putchar.c \
 		$(PATH_SRC)ft_putstr.c \
 		$(PATH_SRC)ft_putendl.c \
