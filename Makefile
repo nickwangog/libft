@@ -6,7 +6,7 @@
 #    By: nwang <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/17 09:42:04 by nwang             #+#    #+#              #
-#    Updated: 2017/09/30 14:24:01 by nwang            ###   ########.fr        #
+#    Updated: 2017/10/03 15:49:53 by nwang            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,12 +69,12 @@ SRC = 	$(PATH_SRC)ft_strlen.c \
 		$(PATH_SRC)ft_putstr_fd.c \
 		$(PATH_SRC)ft_putendl_fd.c \
 		$(PATH_SRC)ft_putnbr_fd.c \
-	#	$(PATH_SRC)ft_lstnew.c \
+		$(PATH_SRC)ft_lstnew.c \
 		$(PATH_SRC)ft_lstdelone.c \
 		$(PATH_SRC)ft_lstdel.c \
 		$(PATH_SRC)ft_lstadd.c \
 		$(PATH_SRC)ft_lstiter.c \
-	#	$(PATH_SRC)ft_lstmap.c
+		$(PATH_SRC)ft_lstmap.c
 
 OBJ = $(patsubst %.c,%.o,$(SRC))
 
