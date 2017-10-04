@@ -6,7 +6,7 @@
 #    By: nwang <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/17 09:42:04 by nwang             #+#    #+#              #
-#    Updated: 2017/10/03 20:10:18 by nwang            ###   ########.fr        #
+#    Updated: 2017/10/03 21:58:11 by nwang            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,6 +72,7 @@ SRC = 	ft_strlen.c \
 		ft_lstadd.c \
 		ft_lstiter.c \
 		ft_lstmap.c \
+		ft_square.c \
 		ft_strlowcase.c \
 		ft_strrev.c \
 		ft_strupcase.c \

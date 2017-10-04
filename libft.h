@@ -6,7 +6,7 @@
 /*   By: nwang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/23 20:49:08 by nwang             #+#    #+#             */
-/*   Updated: 2017/10/03 20:10:31 by nwang            ###   ########.fr       */
+/*   Updated: 2017/10/03 21:58:30 by nwang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,5 +86,6 @@ char				*ft_strlowcase(char *str);
 char				*ft_strupcase(char *str);
 char				*ft_strrev(char *str);
 void				ft_swap(int *a, int *b);
+int					ft_square(int c);
 
 #endif

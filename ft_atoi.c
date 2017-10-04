@@ -6,7 +6,7 @@
 /*   By: nwang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/26 21:54:03 by nwang             #+#    #+#             */
-/*   Updated: 2017/09/30 15:38:00 by nwang            ###   ########.fr       */
+/*   Updated: 2017/10/03 21:33:58 by nwang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,29 @@
 
 int		ft_atoi(const char *str)
 {
-	int		i;
-	int		sign;
-	long	res;
+	int result;
+	int negatif;
 
-	i = 0;
-	res = 0;
-	sign = 1;
-	while (str[i] <= 32)
-		i++;
-	if (str[i] == '+' || str[i] == '-')
+	result = 0;
+	negatif = 0;
+	if (str)
 	{
-		if (str[i] == '-')
-			sign = -1;
-		i++;
+		while (*str == ' ' || *str == '\t' || *str == '\n' || *str == '\r'
+				|| *str == '\f' || *str == '\v')
+			str++;
+		if (*str == '-')
+		{
+			negatif = 1;
+			str++;
+		}
+		else if (*str == '+')
+			str++;
+		while (*str >= '0' && *str <= '9')
+		{
+			result += *str++ - '0';
+			if (*str >= '0' && *str <= '9')
+				result *= 10;
+		}
 	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		res = res * 10 + str[i] - '0';
-		i++;
-	}
-	return ((int)(sign * res));
+	return (negatif ? -result : result);
 }

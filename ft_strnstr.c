@@ -6,7 +6,7 @@
 /*   By: nwang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/28 22:32:45 by nwang             #+#    #+#             */
-/*   Updated: 2017/09/28 22:39:08 by nwang            ###   ########.fr       */
+/*   Updated: 2017/10/03 21:12:10 by nwang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,27 @@
 
 char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 {
-	size_t	i;
-	size_t	j;
-	char	*str;
+	int		i;
+	int		j;
 
-	if (s1 == NULL || s2 == NULL)
+	if (ft_strlen((char *)s2) == 0)
+		return ((char *)s1);
+	if (ft_strlen((char *)s2) > n)
 		return (NULL);
 	i = 0;
 	j = 0;
-	if (!*s2)
-		return ((char*)s1);
-	while (s1[i] && i < n)
+	while (s1[i] && i < (int)n)
 	{
-		while (s1[i] != s2[j] && s1[i])
-			i++;
-		str = (char*)&(s1[i]);
-		while (s1[i] == s2[j] && s1[i] && s2[j] && i++ < n)
+		while (s1[i] && s2[j] && s1[i] == s2[j] && i < (int)n)
 		{
+			i++;
 			j++;
 		}
-		if (!s2[j])
-			return (str);
+		if (j == (int)ft_strlen(s2))
+			return ((char *)s1 + i - j);
 		else
-			j = 0;
+			i = (i - j) + 1;
+		j = 0;
 	}
 	return (NULL);
 }

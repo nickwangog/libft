@@ -6,51 +6,67 @@
 /*   By: nwang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/30 14:29:20 by nwang             #+#    #+#             */
-/*   Updated: 2017/09/30 15:48:19 by nwang            ###   ########.fr       */
+/*   Updated: 2017/10/03 22:00:55 by nwang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char		*ft_replace_chr(char const *s, int c1, int c2)
+static int		ft_cnt_parts(const char *s, char c)
 {
-	size_t		i;
+	int		cnt;
+	int		in_substring;
 
-	i = 0;
-	while (s[i])
+	in_substring = 0;
+	cnt = 0;
+	while (*s != '\0')
 	{
-		if (s[i] == c1)
-			*((char *)s + i) = c2;
-		++i;
+		if (in_substring == 1 && *s == c)
+			in_substring = 0;
+		if (in_substring == 0 && *s != c)
+		{
+			in_substring = 1;
+			cnt++;
+		}
+		s++;
 	}
-	return ((char *)s);
+	return (cnt);
+}
+
+static int		ft_wlen(const char *s, char c)
+{
+	int		len;
+
+	len = 0;
+	while (*s != c && *s != '\0')
+	{
+		len++;
+		s++;
+	}
+	return (len);
 }
 
 char			**ft_strsplit(char const *s, char c)
 {
-	size_t		i;
-	size_t		j;
-	size_t		end;
-	char		tmp[ft_strlen(s) + 1];
-	char		**arr;
+	char	**t;
+	int		nb_word;
+	int		index;
 
-	i = 0;
-	j = 0;
-	end = ft_strlen(s);
-	ft_bzero(tmp, sizeof(tmp));
-	ft_strcpy(tmp, s);
-	ft_replace_chr(tmp, c, '\0');
-	arr = (char **)malloc(sizeof(*arr) * (end));
-	while (i < end && s[i] != '\0')
+	index = 0;
+	nb_word = ft_cnt_parts((const char *)s, c);
+	t = (char **)malloc(sizeof(*t) * (ft_cnt_parts((const char *)s, c) + 1));
+	if (t == NULL)
+		return (NULL);
+	while (nb_word--)
 	{
-		while (s[i] == c)
-			++i;
-		arr[j] = ft_strdup(tmp + i);
-		++j;
-		while (tmp[i] != '\0')
-			++i;
-		++i;
+		while (*s == c && *s != '\0')
+			s++;
+		t[index] = ft_strsub((const char *)s, 0, ft_wlen((const char *)s, c));
+		if (t[index] == NULL)
+			return (NULL);
+		s = s + ft_wlen(s, c);
+		index++;
 	}
-	arr[j] = NULL;
-	return (arr);
+	t[index] = NULL;
+	return (t);
 }
