@@ -6,13 +6,13 @@
 /*   By: nwang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/13 17:20:58 by nwang             #+#    #+#             */
-/*   Updated: 2017/10/03 18:52:43 by nwang            ###   ########.fr       */
+/*   Updated: 2017/10/03 19:52:52 by nwang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_strrev(char *str)
+char	*ft_strrev(char *str)
 {
 	int		i;
 	int		a;

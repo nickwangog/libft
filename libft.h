@@ -6,7 +6,7 @@
 /*   By: nwang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/23 20:49:08 by nwang             #+#    #+#             */
-/*   Updated: 2017/10/03 18:56:52 by nwang            ###   ########.fr       */
+/*   Updated: 2017/10/03 20:10:31 by nwang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@
 # include <unistd.h>
 # include <stdio.h>
 # include <stdlib.h>
-
-typedef unsigned int	t_uint;
 
 typedef struct		s_list
 {
@@ -84,10 +82,9 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
-char				*ft_strcapitalize(char *str);
 char				*ft_strlowcase(char *str);
 char				*ft_strupcase(char *str);
-void				*ft_strrev(char *str);
+char				*ft_strrev(char *str);
 void				ft_swap(int *a, int *b);
 
 #endif
