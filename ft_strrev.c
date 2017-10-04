@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_get_next_line.h                                 :+:      :+:    :+:   */
+/*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nwang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/25 22:01:13 by nwang             #+#    #+#             */
-/*   Updated: 2017/09/25 22:01:30 by nwang            ###   ########.fr       */
+/*   Created: 2017/04/13 17:20:58 by nwang             #+#    #+#             */
+/*   Updated: 2017/10/03 18:52:43 by nwang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_GET_NEXT_LINE_H
-# define FT_GET_NEXT_LINE_H
+#include "libft.h"
 
-# define BUFF_SIZE 1000
+void	*ft_strrev(char *str)
+{
+	int		i;
+	int		a;
+	char	t;
 
-# include <fcntl.h>
-# include <unistd.h>
-# include <stdlib.h>
-# include <ctype.h>
-
-# include "libft.h"
-
-int			ft_get_next_line(int const fd, char **line);
-
-#endif
+	a = 0;
+	while (str[a] != '\0')
+		a++;
+	i = -1;
+	while (i++ < a--)
+	{
+		t = str[i];
+		str[i] = str[a];
+		str[a] = t;
+	}
+	return (str);
+}
