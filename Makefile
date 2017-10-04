@@ -6,89 +6,85 @@
 #    By: nwang <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/17 09:42:04 by nwang             #+#    #+#              #
-#    Updated: 2017/10/03 19:14:13 by nwang            ###   ########.fr        #
+#    Updated: 2017/10/03 19:41:42 by nwang            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-PATH_SRC = ./
-PATH_OBJ = ./
 
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -Ofast -I ./includes/
 
-SRC = 	$(PATH_SRC)ft_strlen.c \
-		$(PATH_SRC)ft_strdup.c \
-		$(PATH_SRC)ft_strcpy.c\
-		$(PATH_SRC)ft_strncpy.c \
-		$(PATH_SRC)ft_strcat.c \
-		$(PATH_SRC)ft_strncat.c \
-		$(PATH_SRC)ft_strlcat.c \
-		$(PATH_SRC)ft_strchr.c \
-		$(PATH_SRC)ft_strrchr.c\
-		$(PATH_SRC)ft_isalpha.c \
-		$(PATH_SRC)ft_isdigit.c \
-		$(PATH_SRC)ft_isalnum.c\
-		$(PATH_SRC)ft_isascii.c \
-		$(PATH_SRC)ft_isprint.c \
-		$(PATH_SRC)ft_toupper.c \
-		$(PATH_SRC)ft_tolower.c \
-		$(PATH_SRC)ft_strstr.c \
-		$(PATH_SRC)ft_memset.c \
-		$(PATH_SRC)ft_bzero.c \
-		$(PATH_SRC)ft_memcpy.c \
-		$(PATH_SRC)ft_memccpy.c\
-		$(PATH_SRC)ft_memmove.c \
-		$(PATH_SRC)ft_memchr.c \
-		$(PATH_SRC)ft_memcmp.c \
-		$(PATH_SRC)ft_strcmp.c \
-		$(PATH_SRC)ft_strncmp.c \
-		$(PATH_SRC)ft_strnstr.c\
-		$(PATH_SRC)ft_atoi.c \
-		$(PATH_SRC)ft_memalloc.c \
-		$(PATH_SRC)ft_memdel.c \
-		$(PATH_SRC)ft_strnew.c \
-		$(PATH_SRC)ft_strdel.c \
-		$(PATH_SRC)ft_strclr.c \
-		$(PATH_SRC)ft_striter.c \
-		$(PATH_SRC)ft_striteri.c \
-		$(PATH_SRC)ft_strmap.c \
-		$(PATH_SRC)ft_strmapi.c \
-		$(PATH_SRC)ft_strequ.c \
-		$(PATH_SRC)ft_strnequ.c \
-		$(PATH_SRC)ft_strsub.c \
-		$(PATH_SRC)ft_strjoin.c \
-		$(PATH_SRC)ft_strtrim.c \
-		$(PATH_SRC)ft_strsplit.c \
-		$(PATH_SRC)ft_itoa.c \
-		$(PATH_SRC)ft_putchar.c \
-		$(PATH_SRC)ft_putstr.c \
-		$(PATH_SRC)ft_putendl.c \
-		$(PATH_SRC)ft_putnbr.c \
-		$(PATH_SRC)ft_putchar_fd.c \
-		$(PATH_SRC)ft_putstr_fd.c \
-		$(PATH_SRC)ft_putendl_fd.c \
-		$(PATH_SRC)ft_putnbr_fd.c \
-		$(PATH_SRC)ft_lstnew.c \
-		$(PATH_SRC)ft_lstdelone.c \
-		$(PATH_SRC)ft_lstdel.c \
-		$(PATH_SRC)ft_lstadd.c \
-		$(PATH_SRC)ft_lstiter.c \
-		$(PATH_SRC)ft_lstmap.c \
-		$(PATH_SRC)ft_strcapitalize.c \
-		$(PATH_SRC)ft_strlowcase.c \
-		$(PATH_SRC)ft_strrev.c \
-		$(PATH_SRC)ft_strupcase.c \
-		$(PATH_SRC)ft_swap.c
+SRC = 	ft_strlen.c \
+		ft_strdup.c \
+		ft_strcpy.c \
+		ft_strncpy.c \
+		ft_strcat.c \
+		ft_strncat.c \
+		ft_strlcat.c \
+		ft_strchr.c \
+		ft_strrchr.c\
+		ft_isalpha.c \
+		ft_isdigit.c \
+		ft_isalnum.c \
+		ft_isascii.c \
+		ft_isprint.c \
+		ft_toupper.c \
+		ft_tolower.c \
+		ft_strstr.c \
+		ft_memset.c \
+		ft_bzero.c \
+		ft_memcpy.c \
+		ft_memccpy.c \
+		ft_memmove.c \
+		ft_memchr.c \
+		ft_memcmp.c \
+		ft_strcmp.c \
+		ft_strncmp.c \
+		ft_strnstr.c \
+		ft_atoi.c \
+		ft_memalloc.c \
+		ft_memdel.c \
+		ft_strnew.c \
+		ft_strdel.c \
+		ft_strclr.c \
+		ft_striter.c \
+		ft_striteri.c \
+		ft_strmap.c \
+		ft_strmapi.c \
+		ft_strequ.c \
+		ft_strnequ.c \
+		ft_strsub.c \
+		ft_strjoin.c \
+		ft_strtrim.c \
+		ft_strsplit.c \
+		ft_itoa.c \
+		ft_putchar.c \
+		ft_putstr.c \
+		ft_putendl.c \
+		ft_putnbr.c \
+		ft_putchar_fd.c \
+		ft_putstr_fd.c \
+		ft_putendl_fd.c \
+		ft_putnbr_fd.c \
+		ft_lstnew.c \
+		ft_lstdelone.c \
+		ft_lstdel.c \
+		ft_lstadd.c \
+		ft_lstiter.c \
+		ft_lstmap.c \
+		ft_strcapitalize.c \
+		ft_strlowcase.c \
+		ft_strrev.c \
+		ft_strupcase.c \
+		ft_swap.c
 
-OBJ = $(patsubst %.c,%.o,$(SRC))
+OBJ = $(patsubst %.c, %.o, $(SRC))
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-		$(CC) -Wall -Wextra -Werror -c $(SRC)
-		ar rc $(NAME) $(OBJ)
-		ranlib $(NAME)
+$(NAME):
+	$(CC) -Wall -Wextra -Werror -c $(SRC)
+	ar rcs $(NAME) $(OBJ)
 
 clean:
 	/bin/rm -f $(OBJ)
