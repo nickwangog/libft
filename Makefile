@@ -6,7 +6,7 @@
 #    By: nwang <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/17 09:42:04 by nwang             #+#    #+#              #
-#    Updated: 2017/10/03 18:59:30 by nwang            ###   ########.fr        #
+#    Updated: 2017/10/03 19:14:13 by nwang            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -79,7 +79,7 @@ SRC = 	$(PATH_SRC)ft_strlen.c \
 		$(PATH_SRC)ft_strlowcase.c \
 		$(PATH_SRC)ft_strrev.c \
 		$(PATH_SRC)ft_strupcase.c \
-		$(PATH_SRC)ft_swap.c 
+		$(PATH_SRC)ft_swap.c
 
 OBJ = $(patsubst %.c,%.o,$(SRC))
 
