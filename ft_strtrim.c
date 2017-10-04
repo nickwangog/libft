@@ -6,7 +6,7 @@
 /*   By: nwang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/29 22:50:10 by nwang             #+#    #+#             */
-/*   Updated: 2017/09/30 15:51:04 by nwang            ###   ########.fr       */
+/*   Updated: 2017/10/03 18:28:31 by nwang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,29 @@
 
 char		*ft_strtrim(char const *s)
 {
-	unsigned int	i;
-	size_t			len;
-	char			*ret;
+	int		i;
+	int		j;
+	int		k;
+	char	*tmp;
 
-	if (!s)
-		return (0);
-	i = 0;
-	while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
-		i++;
-	len = ft_strlen(s) - 1;
-	while (len > i && (s[i] == ' ' || s[i] == '\n' || s[i] == '\t'))
-		len--;
-	if (len < i)
-		return (ret = ft_strdup(""));
-	return (ret = ft_strsub(s, i, len - (size_t)i + 1));
+	if (s)
+	{
+		i = 0;
+		j = ft_strlen((char *)s) - 1;
+		while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
+			i++;
+		tmp = (char *)malloc(sizeof(char) * (j - i + 1));
+		while (s[j] == ' ' || s[j] == '\n' || s[j] == '\t')
+			j--;
+		k = 0;
+		while (i <= j)
+		{
+			tmp[k] = s[i];
+			i++;
+			k++;
+		}
+		tmp[k] = '\0';
+		return (tmp);
+	}
+	return (NULL);
 }
