@@ -6,7 +6,7 @@
 /*   By: nwang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/30 16:06:07 by nwang             #+#    #+#             */
-/*   Updated: 2017/10/02 16:13:44 by nwang            ###   ########.fr       */
+/*   Updated: 2017/10/04 18:12:26 by nwang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	ft_lstadd(t_list **alst, t_list *new)
 {
-	if (alst && *alst && new)
-	{
-		new->next = (*alst);
-		*alst = new;
-	}
+	if (!alst || !new)
+		return ;
+	new->next = *alst;
+	*alst = new;
+	return ;
 }

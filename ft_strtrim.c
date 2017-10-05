@@ -6,7 +6,7 @@
 /*   By: nwang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/29 22:50:10 by nwang             #+#    #+#             */
-/*   Updated: 2017/10/03 22:14:46 by nwang            ###   ########.fr       */
+/*   Updated: 2017/10/04 18:40:38 by nwang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,28 @@
 
 char		*ft_strtrim(char const *s)
 {
-	char	*str;
-	char	*str_new;
-	size_t	len;
-	size_t	counter;
+	size_t		i;
+	size_t		start;
+	size_t		end;
+	char		*str;
 
-	str = (char*)s;
-	if (!str)
+	if (s == NULL)
 		return (NULL);
-	while (*str == ' ' || *str == '\t' || *str == '\n')
-		str++;
-	len = ft_strlen(str) - 1;
-	if (ft_strlen(str) == 0)
-		return (str_new = ft_strnew(0));
-	while (str[len] == ' ' || str[len] == '\t' || str[len] == '\n')
-		len--;
-	if (!(str_new = ft_strnew(len)))
+	i = 0;
+	while (s[i] && (s[i] == ' ' || s[i] == '\t' || s[i] == '\n'))
+		i++;
+	if (!s[i])
+		return (ft_strnew(0));
+	start = i;
+	while (s[i])
+		i++;
+	i--;
+	while (s[i] == ' ' || s[i] == '\t' || s[i] == '\n')
+		i--;
+	end = i + 1;
+	str = ft_strnew(end - start);
+	if (str == NULL)
 		return (NULL);
-	counter = 0;
-	while (counter <= len)
-	{
-		str_new[counter] = str[counter];
-		counter++;
-	}
-	str_new[counter] = 0;
-	return (str_new);
+	ft_strncpy(str, &s[start], end - start);
+	return (str);
 }

@@ -6,7 +6,7 @@
 /*   By: nwang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/20 14:24:11 by nwang             #+#    #+#             */
-/*   Updated: 2017/09/28 22:03:02 by nwang            ###   ########.fr       */
+/*   Updated: 2017/10/03 23:10:35 by nwang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ size_t		ft_strlcat(char *dst, const char *src, size_t size)
 
 	i = 0;
 	j = 0;
-	if (!dst || !src)
-		return (0);
 	res = ft_strlen(src);
 	while (dst[i] != '\0' && i < size)
 		i++;

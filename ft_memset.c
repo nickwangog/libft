@@ -6,7 +6,7 @@
 /*   By: nwang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/22 15:41:16 by nwang             #+#    #+#             */
-/*   Updated: 2017/09/28 21:59:58 by nwang            ###   ########.fr       */
+/*   Updated: 2017/10/03 23:07:30 by nwang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ void		*ft_memset(void *b, int c, size_t len)
 	char	*str;
 
 	str = (char *)b;
-	if (!str)
-		return (NULL);
 	if (len == 0)
 		return (str);
 	counter = 0;
